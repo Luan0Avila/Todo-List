@@ -31,7 +31,7 @@ const saveTodo = (text, done = 0, save = 1) => {
     todo.appendChild(editBtn);
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.classList.add("remove-todo");
+    deleteBtn.classList.add("delete-todo");
     deleteBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     todo.appendChild(deleteBtn);
 
@@ -144,7 +144,7 @@ document.addEventListener("click", (e) => {
         updateTodoStatusLocalStorage(todoTitle);
     }
 
-    if (targetEl.classList.contains("remove-todo")) {
+    if (targetEl.classList.contains("delete-todo")) {
         parentEl.remove();
 
     // Utilizando dados da localStorage
